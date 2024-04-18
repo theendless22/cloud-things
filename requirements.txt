@@ -1,0 +1,6 @@
+pathspec==0.10.2
+PyYAML @ file:///private/tmp/pyyaml-20231018-5610-1rdh755/PyYAML-6.0.1
+six==1.16.0
+yamllint==1.28.0
+socat
+python-tk==3.12
