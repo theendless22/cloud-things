@@ -9,7 +9,7 @@ COPY ./main.py /supe-project/src/
 
 RUN pip install --upgrade pip
 #RUN pip install python3-tk
-#RUN pip freeze > requirements.txt
+RUN pip freeze > requirements.txt
 RUN pip install -r requirements.txt
 
 CMD [ "python", "./main.py"]
