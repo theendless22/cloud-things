@@ -36,6 +36,8 @@ jobs:
           PULL_REQUEST_BRANCH: "deploy"
           PULL_REQUEST_TITLE: "This is an AUTO PR; generated because you're lazy"
           PULL_REQUEST_BODY: "The Justice league has raised this PR on your behalf"
+          PULL_REQUEST_ASSIGNEE: "theendless22"
+          PULL_REQUEST_LABEL: "Review me!"
 
   push_to_registry:
     name: Push Docker image to Docker Hub
