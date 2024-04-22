@@ -1,6 +1,6 @@
 # This is a basic workflow
 
-name: actions
+name: batman-actions #pre commit linting and detective work :D
 
 # Controls when the workflow will run
 on:
