@@ -1,6 +1,7 @@
 # Create your superhero vs villain story
 import random
 import tkinter as tk
+from tkinter import ttk
 
 
 def generate_superhero():
@@ -116,17 +117,23 @@ app = tk.Tk()
 app.title("Superhero vs SuperVillain")
 
 # create widgets
+
 output_text = tk.StringVar()
 output_label = tk.Label(
-    app, textvariable=output_text, font=("ComicSans", 14), wraplength=600
+    app,
+    textvariable=output_text,
+    font=("Helvetica", 14),
+    wraplength=600,
+    justify="center",  # Center align the text
 )
-button = tk.Button(
+button = ttk.Button(  # Use ttk.Button for better styling
     app, text="Generate Super Hero & Villain Info!", command=click_to_generate
 )
 
 # Place widgets in the window
-output_label.pack(pady=60)
-button.pack(pady=20, anchor="center", side="top")
+
+output_label.grid(row=0, column=0, padx=20, pady=(60, 20))
+button.grid(row=5, column=0, pady=20)
 
 # start the gui
 app.mainloop()
