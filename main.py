@@ -2,6 +2,9 @@
 import random
 import tkinter as tk
 from tkinter import ttk
+import logging
+
+logging.basicConfig(format="%(asctime)s - %(levelname)s - %(message)s")
 
 
 def generate_superhero():
@@ -44,16 +47,10 @@ def generate_superhero():
     ]
 
     print("lets generate your random super hero name!")
-
+    logging.info("Generating random superhero name.")
     superName = random.choice(superFirstName) + random.choice(superLastName)
     superPower = random.choice(superPowers)
-
     return f"Your Super Hero Name is {superName} and your power is {superPower}"
-
-    # print("your super-name is!")
-    # print(superName)
-    # print("your super power is:")
-    # print(random.choice(superPowers))
 
 
 # This is super villains segment
@@ -96,25 +93,21 @@ def gerenate_super_villain():
 
     villainName = random.choice(villan_first_name) + random.choice(villan_last_name)
     villainpower = random.choice(villainPowers)
-
+    logging.info("Generating random villain name.")
     return f"Your arch nemesis is {villainName} and their power is {villainpower}"
-
-    # print("your arch nemesis is :O ")
-    # print(villainName)
-    # print("your nemesis has the power of:")
-    # print(random.choice(villainPowers))
 
 
 def click_to_generate():
     superhero_info = generate_superhero()
     villain_info = gerenate_super_villain()
-
+    logging.info("Button clicked to generate superhero and supervillain.")
     output_text.set(superhero_info + "\n\n" + villain_info)
 
 
 # main application
 app = tk.Tk()
 app.title("Superhero vs SuperVillain")
+
 
 # create widgets
 
@@ -136,4 +129,5 @@ output_label.grid(row=0, column=0, padx=20, pady=(60, 20))
 button.grid(row=5, column=0, pady=20)
 
 # start the gui
+logging.info("Starting the Superhero vs SuperVillain application.")
 app.mainloop()
